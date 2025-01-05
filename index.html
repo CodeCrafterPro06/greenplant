@@ -19,11 +19,13 @@
                     <button onclick="showPage('home')" class="nav-link hover:text-green-500">Home</button>
                     <button onclick="showPage('about')" class="nav-link hover:text-green-500">About Us</button>
                     <button onclick="showPage('mission')" class="nav-link hover:text-green-500">Our Mission</button>
-                    <button onclick="showPage('involve')" class="nav-link hover:text-green-500">Get Involved</button>
+                    <!-- <button onclick="showPage('involve')" class="nav-link hover:text-green-500">Get Involved</button> -->
                     <button onclick="showPage('blog')" class="nav-link hover:text-green-500">Blog & Resources</button>
                     <button onclick="showPage('contact')" class="nav-link hover:text-green-500">Contact</button>
-                    <button onclick="showPage('login')" class="nav-link hover:text-green-500">Login</button>
-                    <button onclick="showPage('signup')" class="nav-link hover:text-green-500">Sign Up</button>
+                </div>
+                <div class="hidden md:flex gap-x-2">
+                    <button onclick="showPage('login')" class="px-4 py-2 rounded-lg bg-transparent border border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 transition-all">Login</button>
+                    <button onclick="showPage('signup')" class="px-4 py-2 rounded-lg bg-transparent border border-green-400 text-green-400 hover:bg-green-400 hover:text-gray-900 transition-all">Sign Up</button>
                 </div>
                 <button class="md:hidden text-2xl" onclick="toggleMobileMenu()">
                     <i class="bi bi-list"></i>
@@ -36,7 +38,7 @@
                 <button onclick="showPage('home')" class="nav-link hover:text-green-500">Home</button>
                 <button onclick="showPage('about')" class="nav-link hover:text-green-500">About Us</button>
                 <button onclick="showPage('mission')" class="nav-link hover:text-green-500">Our Mission</button>
-                <button onclick="showPage('involve')" class="nav-link hover:text-green-500">Get Involved</button>
+                <!-- <button onclick="showPage('involve')" class="nav-link hover:text-green-500">Get Involved</button> -->
                 <button onclick="showPage('blog')" class="nav-link hover:text-green-500">Blog & Resources</button>
                 <button onclick="showPage('contact')" class="nav-link hover:text-green-500">Contact</button>
                 <button onclick="showPage('login')" class="nav-link hover:text-green-500">Login</button>
@@ -53,20 +55,65 @@
                 <div class="text-center px-4">
                     <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">Preserving Nature's Legacy</h1>
                     <p class="text-xl mb-8 max-w-2xl mx-auto text-white">Join us in our mission to protect and preserve plant species for future generations.</p>
-                    <button onclick="showPage('involve')" class="button-hover bg-green-600 text-white px-8 py-3 rounded-full text-lg font-semibold">
-                        Get Involved
+                    <button onclick="showPage('contact')" class="button-hover bg-green-600 text-white px-8 py-3 rounded-full text-lg font-semibold">
+                        Contact Us
                     </button>
                 </div>
             </div>
+            <section class="py-20 bg-[#243028]">
+                <div class="container mx-auto px-4">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Protect Card -->
+                        <div class="feature-card bg-[#1a2421] rounded-xl p-8">
+                            <div class="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mb-6">
+                                <i class="bi bi-shield-check text-2xl text-green-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-4">Protect</h3>
+                            <p class="text-gray-400 mb-6">GreenEarth included in the National Collection are safeguarded from extinction and can help conservationists restore healthy, diverse populations to nature.</p>
+                            <button class="text-green-400 flex items-center group">
+                                Learn More 
+                                <i class="bi bi-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                            </button>
+                        </div>
+        
+                        <!-- Educate Card -->
+                        <div class="feature-card bg-[#1a2421] rounded-xl p-8">
+                            <div class="w-16 h-16 bg-blue-400/20 rounded-full flex items-center justify-center mb-6">
+                                <i class="bi bi-book text-2xl text-blue-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-4">Educate</h3>
+                            <p class="text-gray-400 mb-6">GreenEarth Academy provides training and tools to prepare the next generation of rare plant conservationists.</p>
+                            <button class="text-blue-400 flex items-center group">
+                                Learn More 
+                                <i class="bi bi-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                            </button>
+                        </div>
+        
+                        <!-- Connect Card -->
+                        <div class="feature-card bg-[#1a2421] rounded-xl p-8">
+                            <div class="w-16 h-16 bg-yellow-400/20 rounded-full flex items-center justify-center mb-6">
+                                <i class="bi bi-people text-2xl text-yellow-400"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-4">Connect</h3>
+                            <p class="text-gray-400 mb-6">Contributing to the GreenEarth Academy Forum gives plant professionals the opportunity to share their knowledge and help others learn from their experience.</p>
+                            <button class="text-yellow-400 flex items-center group">
+                                Learn More 
+                                <i class="bi bi-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
         </div>
 
         <!-- About Page -->
-        <div id="about" class="pt-24 pb-16 px-4">
-            <div class="container mx-auto max-w-4xl">
-                <h2 class="text-3xl font-bold mb-8 text-green-500">About Us</h2>
+        <div id="about" class="pt-24 pb-16 px-6">
+            <h2 class="text-3xl mx-auto max-w-6xl font-bold mb-8 text-green-500">About Us</h2>
+            <div class="container mx-auto max-w-6xl flex flex-col gap-y-6">
                 <div class="grid md:grid-cols-2 gap-8">
                     <div>
-                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800" alt="Conservation work" class="rounded-lg shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800" alt="Conservation work" class="rounded-lg shadow-lg feature-card">
                     </div>
                     <div>
                         <p class="text-lg mb-6">
@@ -77,11 +124,48 @@
                         </p>
                     </div>
                 </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://saveplants.org/wp-content/uploads/2020/12/plants-in-peril-img-home.png" alt="Conservation work" class="rounded-lg shadow-lg feature-card">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold mb-8 text-green-500">Why We Save Plants</h2>
+                        <p class="text-lg mb-6">
+                            Without plants there would be no us. Plants are integral to our quality of life and essential to our very survival. Plants clean the air, water and soil and provide food, clothing, medicine and shelter for the Earth’s 7 billion human inhabitants. 
+                        </p>
+                        <p class="text-lg mb-6">
+                            Plants also hold an immeasurable intrinsic value, providing beauty, tranquility and escape from an ever increasingly chaotic world. Integral to the world’s ecosystem, plants and their incredible diversity make life as we know it possible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-3xl font-bold mb-8 text-green-500 text-center mt-6">How We Save Plants</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 flex flex-col items-center">
+                        <div class="w-16 h-16 mb-6">
+                            <img src="https://saveplants.org/wp-content/uploads/2020/12/tubes-icon.png"/>
+                        </div>
+                        <p class="text-white-400 mb-6 text-center">We work hard to continually advance the science of saving rare plant species.</p>
+                    </div>
+                    <div class="p-8 flex flex-col items-center">
+                        <div class="w-16 h-16 mb-6">
+                            <img src="https://saveplants.org/wp-content/uploads/2020/12/maple-icon.png"/>
+                        </div>
+                        <p class="text-white-400 mb-6 text-center">We apply this science to save imperiled plant species.</p>
+                    </div>
+                    <div class="p-8 flex flex-col items-center">
+                        <div class="w-16 h-16 mb-6">
+                            <img src="https://saveplants.org/wp-content/uploads/2020/12/advocacy-icon.png"/>
+                        </div>
+                        <p class="text-white-400 mb-6 text-center">We advocate on behalf of our collective efforts to Save Plants and promote the value of plants to humankind.                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Mission Page -->
-        <div id="mission" class="pt-24 pb-16 px-4 bg-[#243028]">
+        <div id="mission" class="pt-24 pb-16 px-4 mission">
             <div class="container mx-auto max-w-4xl">
                 <h2 class="text-3xl font-bold mb-8 text-green-500">Our Mission</h2>
                 <div class="grid gap-8">
@@ -106,7 +190,7 @@
         </div>
 
         <!-- Get Involved Page -->
-        <div id="involve" class="pt-24 pb-16 px-4">
+        <!-- <div id="involve" class="pt-24 pb-16 px-4">
             <div class="container mx-auto max-w-4xl">
                 <h2 class="text-3xl font-bold mb-8 text-green-500">Get Involved</h2>
                 <div class="grid md:grid-cols-2 gap-8">
@@ -126,7 +210,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Blog Page -->
         <div id="blog" class="pt-24 pb-16 px-4 bg-[#243028]">
@@ -150,7 +234,7 @@
                         </div>
                     </article>
                     <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1507553552928-554e8e4c00f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHwxfHx8fHx8fHwxNjEyMjA5MTc2&ixlib=rb-1.2.1&q=80&w=1080" alt="Preservation Techniques" class="w-full h-48 object-cover">
+                        <img src="https://imgs.search.brave.com/_GiBwVm1RhKjDYQsJKEn3yjYRtV5jgUryHCVMvDmeog/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb250/ZW50LmNlcy5uY3N1/LmVkdS9tZWRpYS9p/bWFnZXMvQ0hfMTMt/MjVfRWNoZXZlcmlh/X0thdGhsZWVuX01v/b3JlX2NjYnkyMC5q/cGVn" alt="Preservation Techniques" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Innovative Preservation Techniques</h3>
                             <p class="mb-4">Explore the latest methods adopted in plant conservation to ensure the survival of endangered species.</p>
@@ -158,7 +242,7 @@
                         </div>
                     </article>
                     <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1568690726860-22c4e47902a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHwzfHx8fHx8fHwxNjEyMjA5MTc3&ixlib=rb-1.2.1&q=80&w=1080" alt="Local Plants" class="w-full h-48 object-cover">
+                        <img src="https://imgs.search.brave.com/4e5nxGEl1oJemoLr-b3jlI66zj_dszlJ3f-t4d663uc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1Lzc2LzM1LzY4/LzM2MF9GXzU3NjM1/NjgzM19kVFFJSG5L/SmJNWk5BRThycERY/cTBsMWdhZFVqS2tw/ay5qcGc" alt="Local Plants" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Local Plants and Their Importance</h3>
                             <p class="mb-4">Understanding the ecological role of local plant species and their significance in maintaining biodiversity.</p>
@@ -166,7 +250,7 @@
                         </div>
                     </article>
                     <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1502392913314-e60ea19129b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHw0fHx8fHx8fHwxNjEyMjA5MTc4&ixlib=rb-1.2.1&q=80&w=1080" alt="Impact Stories" class="w-full h-48 object-cover">
+                        <img src="https://imgs.search.brave.com/2KcQ0_VkmrzkzawGJW2xmJijJH208g_gzdZGIesH0Zc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM1/MTQ0MjEzMC9waG90/by9tdWx0aXJhY2lh/bC12b2x1bnRlZXJz/LXBsYW50aW5nLWlu/LXB1YmxpYy1wYXJr/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1BYU0xeVJuNnc2/WFpfUjc4b3NXekhw/dFJ2TUFLSzVsbU51/SkFDYjZvcGljPQ" alt="Impact Stories" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Impact Stories from Our Community</h3>
                             <p class="mb-4">Read stories from individuals who have made significant contributions to plant conservation efforts.</p>
@@ -174,7 +258,7 @@
                         </div>
                     </article>
                     <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1528324977895-d202e4e58c48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHw1fHx8fHx8fHwxNjEyMjA5MTc5&ixlib=rb-1.2.1&q=80&w=1080" alt="Gardening Tips" class="w-full h-48 object-cover">
+                        <img src="https://imgs.search.brave.com/vC93Ccn3hRKpVg6wO3ekTWXrrg9uYoJAL-tOh3cMt90/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGhlc3BydWNlLmNv/bS90aG1iL0JDQzlO/Z2U3SkpoN2NJWWly/ZU1PMm9oeWN2OD0v/MTUwMHgwL2ZpbHRl/cnM6bm9fdXBzY2Fs/ZSgpOm1heF9ieXRl/cygxNTAwMDApOnN0/cmlwX2ljYygpLzEy/LUdldHR5SW1hZ2Vz/LTEyODEzNTM1MF9l/ZGl0ZWQtNC01ODAx/MWIzNjNkZjc4Y2Jj/MjhkODlkMjguanBn" alt="Gardening Tips" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Gardening Tips for Everyone</h3>
                             <p class="mb-4">Learn how you can contribute to conservation by creating a sustainable garden at home.</p>
@@ -182,7 +266,7 @@
                         </div>
                     </article>
                     <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1579054086231-56806f3713c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHwyfHx8fHx8fHwxNjEyMjA5MTgw&ixlib=rb-1.2.1&q=80&w=1080" alt="Scientific Research" class="w-full h-48 object-cover">
+                        <img src="https://imgs.search.brave.com/a6om_2vlJglHTgLmFK17dr5U4ZUCyHWYOeDc9GdgGIo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTI3/NDQ4MTUzMC9waG90/by9jb25kdWN0aW5n/LWV4cGVyaW1lbnRz/LXRvLXRlc3QtaGVy/LWh5cG90aGVzaXMu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PUY1TjFJWXJiZDFD/bUdjaUk4ckhtd2NH/NUEtS0d3REZjNHBX/Z1MzclpadkU9" alt="Scientific Research" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">The Role of Scientific Research in Conservation</h3>
                             <p class="mb-4">Discover how research underpins our conservation efforts and helps us to adjust our strategies.</p>
@@ -190,7 +274,7 @@
                         </div>
                     </article>
                     <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1515378791036-1a7304b564dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHw3fHx8fHx8fHwxNjEyMjA5MTg1&ixlib=rb-1.2.1&q=80&w=1080" alt="Eco-Friendly Practices" class="w-full h-48 object-cover">
+                        <img src="https://imgs.search.brave.com/zdqhBJ8B1Bj7mu7v3fOqbziRqMe0DyCQIhv_e9tDTKg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L1pa/Yjc5anp4dnlBZEhN/UFNIR3NGTm0tMzIw/LTgwLmpwZw" alt="Eco-Friendly Practices" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">Eco-Friendly Practices at Home</h3>
                             <p class="mb-4">Simple and effective ways you can reduce your ecological footprint and contribute to conservation.</p>
@@ -198,7 +282,7 @@
                         </div>
                     </article>
                     <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1515078963350-b7e8bf5bc144?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHw4fHx8fHx8fHwxNjEyMjA5MTg2&ixlib=rb-1.2.1&q=80&w=1080" alt="How to Get Involved" class="w-full h-48 object-cover">
+                        <img src="https://imgs.search.brave.com/6a7X93GftlQV3jmHktbmjAmCpfFDRRxMlOaQHE2VMeU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zYXZl/cGxhbnRzLm9yZy93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMC8x/Mi9lbmNlbGlhLWNh/bGlmb3JuaWNhLWhw/LWZ1bGwucG5n" alt="How to Get Involved" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2">How to Get Involved in Conservation</h3>
                             <p class="mb-4">Find out various ways you can actively participate in conservation efforts locally.</p>
@@ -286,7 +370,7 @@
         </div>
 
         <!-- Donate Page -->
-        <div id="donate" class="pt-24 pb-16 px-4 hidden">
+        <!-- <div id="donate" class="pt-24 pb-16 px-4 hidden">
             <div class="container mx-auto max-w-4xl">
                 <h2 class="text-3xl font-bold mb-8 text-green-500">Donate</h2>
                 <p class="mb-4 text-lg">Your donations directly support our conservation programs and help protect endangered plant species.</p>
@@ -298,10 +382,10 @@
                     Back
                 </button>
             </div>
-        </div>
+        </div> -->
 
         <!-- Volunteer Page -->
-        <div id="volunteer" class="pt-24 pb-16 px-4 hidden">
+        <!-- <div id="volunteer" class="pt-24 pb-16 px-4 hidden">
             <div class="container mx-auto max-w-4xl">
                 <h2 class="text-3xl font-bold mb-8 text-green-500">Volunteer</h2>
                 <p class="mb-4 text-lg">Join our team of volunteers who are passionate about making a difference in plant conservation.</p>
@@ -314,7 +398,7 @@
                 </button>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Footer -->
     <footer class="bg-[#1a2421] border-t border-green-900 py-8">
@@ -333,24 +417,31 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Get Involved</h4>
-                    <ul class="space-y-2">
-                        <li><button onclick="showPage('donate')" class="hover:text-green-500">Donate</button></li>
-                        <li><button onclick="showPage('volunteer')" class="hover:text-green-500">Volunteer</button></li>
-                        <li><button onclick="showPage('blog')" class="hover:text-green-500">Resources</button></li>
-                    </ul>
+                    <h4 class="text-xl font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="text-gray-400 hover:text-green-400"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                    <div>
+                        <ul class="space-y-2">
+                            <li>ginnaramvishwasri@gmail.com</li>
+                            <li>7569345115</li>
+                            <li>123 Nature Street, Medak, Telangana</li>
+                        </ul>
+                    </div>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Contact</h4>
-                    <ul class="space-y-2">
-                        <li>info@greenearth.org</li>
-                        <li>+1 (555) 123-4567</li>
-                        <li>123 Nature Street, Earth City</li>
-                    </ul>
+                    <h4 class="text-xl font-semibold mb-4">Newsletter</h4>
+                    <form class="flex">
+                        <input type="email" placeholder="Enter your email" class="bg-gray-800 px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-400">
+                        <button class="bg-green-400 text-gray-900 px-4 py-2 rounded-r-lg hover:bg-green-500">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="mt-8 pt-8 border-t border-green-900 text-center">
-                <p>&copy; 2024 GreenEarth. All rights reserved.</p>
+                <p>&copy; 2024 Vishwasri. All rights reserved.</p>
             </div>
         </div>
     </footer>

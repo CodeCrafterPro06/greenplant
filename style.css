@@ -6,9 +6,22 @@
     background-size: cover;
     background-position: center;
 }
-.nav-link:hover {
-    transform: translateY(-2px);
-    transition: all 0.3s ease;
+
+.nav-link {
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #4ade80;
+    transition: width 0.5s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
 }
 .button-hover {
     transition: all 0.3s ease;
@@ -16,6 +29,18 @@
 .button-hover:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.mission {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6');
+    background-size: cover;
+    background-position: center;
 }
 #content > div {
     animation: fadeIn 0.5s ease-in;
