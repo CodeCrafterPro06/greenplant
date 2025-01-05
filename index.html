@@ -14,7 +14,7 @@
     <nav class="fixed w-full bg-[#1a2421]/90 backdrop-blur-sm z-50 border-b border-green-900">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-green-500">GreenEarth</div>
+                <button onclick="showPage('home')" class="text-2xl font-bold text-green-500">GreenEarth</button>
                 <div class="hidden md:flex space-x-6">
                     <button onclick="showPage('home')" class="nav-link hover:text-green-500">Home</button>
                     <button onclick="showPage('about')" class="nav-link hover:text-green-500">About Us</button>
@@ -432,7 +432,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="hidden md:flex">
+                <div class="hidden md:block">
                     <h4 class="text-xl font-semibold mb-4">Newsletter</h4>
                     <form class="flex">
                         <input type="email" placeholder="Enter your email" class="bg-gray-800 px-4 py-2 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-green-400">
