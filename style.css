@@ -1,0 +1,27 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=1920');
+    background-size: cover;
+    background-position: center;
+}
+.nav-link:hover {
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+.button-hover {
+    transition: all 0.3s ease;
+}
+.button-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#content > div {
+    animation: fadeIn 0.5s ease-in;
+    /* display: none; */
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

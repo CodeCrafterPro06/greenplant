@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenEarth - Plant Conservation</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#1a2421] text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-[#1a2421]/90 backdrop-blur-sm z-50 border-b border-green-900">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-green-500">GreenEarth</div>
+                <div class="hidden md:flex space-x-6">
+                    <button onclick="showPage('home')" class="nav-link hover:text-green-500">Home</button>
+                    <button onclick="showPage('about')" class="nav-link hover:text-green-500">About Us</button>
+                    <button onclick="showPage('mission')" class="nav-link hover:text-green-500">Our Mission</button>
+                    <button onclick="showPage('involve')" class="nav-link hover:text-green-500">Get Involved</button>
+                    <button onclick="showPage('blog')" class="nav-link hover:text-green-500">Blog & Resources</button>
+                    <button onclick="showPage('contact')" class="nav-link hover:text-green-500">Contact</button>
+                    <button onclick="showPage('login')" class="nav-link hover:text-green-500">Login</button>
+                    <button onclick="showPage('signup')" class="nav-link hover:text-green-500">Sign Up</button>
+                </div>
+                <button class="md:hidden text-2xl" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-[#1a2421] border-t border-green-900">
+            <div class="flex flex-col space-y-4 p-4">
+                <button onclick="showPage('home')" class="nav-link hover:text-green-500">Home</button>
+                <button onclick="showPage('about')" class="nav-link hover:text-green-500">About Us</button>
+                <button onclick="showPage('mission')" class="nav-link hover:text-green-500">Our Mission</button>
+                <button onclick="showPage('involve')" class="nav-link hover:text-green-500">Get Involved</button>
+                <button onclick="showPage('blog')" class="nav-link hover:text-green-500">Blog & Resources</button>
+                <button onclick="showPage('contact')" class="nav-link hover:text-green-500">Contact</button>
+                <button onclick="showPage('login')" class="nav-link hover:text-green-500">Login</button>
+                <button onclick="showPage('signup')" class="nav-link hover:text-green-500">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Container -->
+    <div id="content">
+        <!-- Home Page -->
+        <div id="home" class="min-h-screen">
+            <div class="hero-image h-screen flex items-center justify-center">
+                <div class="text-center px-4">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">Preserving Nature's Legacy</h1>
+                    <p class="text-xl mb-8 max-w-2xl mx-auto text-white">Join us in our mission to protect and preserve plant species for future generations.</p>
+                    <button onclick="showPage('involve')" class="button-hover bg-green-600 text-white px-8 py-3 rounded-full text-lg font-semibold">
+                        Get Involved
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="pt-24 pb-16 px-4">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold mb-8 text-green-500">About Us</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800" alt="Conservation work" class="rounded-lg shadow-lg">
+                    </div>
+                    <div>
+                        <p class="text-lg mb-6">
+                            GreenEarth is a dedicated organization of botanists, conservationists, and nature enthusiasts working together to protect endangered plant species worldwide.
+                        </p>
+                        <p class="text-lg mb-6">
+                            Founded in 2010, we've successfully preserved over 1,000 plant species and restored numerous natural habitats. We believe that everyone can make a difference.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission Page -->
+        <div id="mission" class="pt-24 pb-16 px-4 bg-[#243028]">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold mb-8 text-green-500">Our Mission</h2>
+                <div class="grid gap-8">
+                    <div class="bg-[#1a2421] p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-4">Conservation</h3>
+                        <p>Protecting endangered plant species through scientific research and habitat preservation. Our dedicated teams work tirelessly for a sustainable future.</p>
+                    </div>
+                    <div class="bg-[#1a2421] p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-4">Education</h3>
+                        <p>Raising awareness about plant conservation through educational programs and community outreach. Join our webinars to learn more about our efforts.</p>
+                    </div>
+                    <div class="bg-[#1a2421] p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-4">Research</h3>
+                        <p>Conducting vital research to understand and protect plant biodiversity. Our studies aim to shed light on the challenges faced by our planet's flora.</p>
+                    </div>
+                    <div class="bg-[#1a2421] p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-4">Community</h3>
+                        <p>Engaging local communities in conservation efforts, encouraging them to take active roles in preserving their natural environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Get Involved Page -->
+        <div id="involve" class="pt-24 pb-16 px-4">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold mb-8 text-green-500">Get Involved</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-[#243028] p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-4">Donate</h3>
+                        <p class="mb-4">Support our conservation efforts with a one-time or monthly donation. Your contributions help us continue our mission.</p>
+                        <button class="button-hover bg-green-600 text-white px-6 py-2 rounded-full" onclick="showPage('donate')">
+                            Donate Now
+                        </button>
+                    </div>
+                    <div class="bg-[#243028] p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold mb-4">Volunteer</h3>
+                        <p class="mb-4">Join our team of volunteers and make a direct impact on conservation. Sign up for our next event and help us make a difference!</p>
+                        <button class="button-hover bg-green-600 text-white px-6 py-2 rounded-full" onclick="showPage('volunteer')">
+                            Join Us
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Page -->
+        <div id="blog" class="pt-24 pb-16 px-4 bg-[#243028]">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold mb-8 text-green-500">Blog & Resources</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1530968464165-7a1861cbaf9f?auto=format&fit=crop&w=800" alt="Latest Conservation Efforts" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Latest Conservation Efforts</h3>
+                            <p class="mb-4">Discover our recent successes in plant preservation and the projects we are currently undertaking to protect biodiversity.</p>
+                            <button class="text-green-500 hover:text-green-400">Read More →</button>
+                        </div>
+                    </article>
+                    <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800" alt="Plant Species Guide" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Plant Species Guide</h3>
+                            <p class="mb-4">Learn about endangered plant species in your area and what you can do to help protect them.</p>
+                            <button class="text-green-500 hover:text-green-400">Read More →</button>
+                        </div>
+                    </article>
+                    <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1507553552928-554e8e4c00f0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHwxfHx8fHx8fHwxNjEyMjA5MTc2&ixlib=rb-1.2.1&q=80&w=1080" alt="Preservation Techniques" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Innovative Preservation Techniques</h3>
+                            <p class="mb-4">Explore the latest methods adopted in plant conservation to ensure the survival of endangered species.</p>
+                            <button class="text-green-500 hover:text-green-400">Read More →</button>
+                        </div>
+                    </article>
+                    <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1568690726860-22c4e47902a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHwzfHx8fHx8fHwxNjEyMjA5MTc3&ixlib=rb-1.2.1&q=80&w=1080" alt="Local Plants" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Local Plants and Their Importance</h3>
+                            <p class="mb-4">Understanding the ecological role of local plant species and their significance in maintaining biodiversity.</p>
+                            <button class="text-green-500 hover:text-green-400">Read More →</button>
+                        </div>
+                    </article>
+                    <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1502392913314-e60ea19129b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHw0fHx8fHx8fHwxNjEyMjA5MTc4&ixlib=rb-1.2.1&q=80&w=1080" alt="Impact Stories" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Impact Stories from Our Community</h3>
+                            <p class="mb-4">Read stories from individuals who have made significant contributions to plant conservation efforts.</p>
+                            <button class="text-green-500 hover:text-green-400">Read More →</button>
+                        </div>
+                    </article>
+                    <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1528324977895-d202e4e58c48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHw1fHx8fHx8fHwxNjEyMjA5MTc5&ixlib=rb-1.2.1&q=80&w=1080" alt="Gardening Tips" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Gardening Tips for Everyone</h3>
+                            <p class="mb-4">Learn how you can contribute to conservation by creating a sustainable garden at home.</p>
+                            <button class="text-green-500 hover:text-green-400">Read More →</button>
+                        </div>
+                    </article>
+                    <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1579054086231-56806f3713c9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHwyfHx8fHx8fHwxNjEyMjA5MTgw&ixlib=rb-1.2.1&q=80&w=1080" alt="Scientific Research" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">The Role of Scientific Research in Conservation</h3>
+                            <p class="mb-4">Discover how research underpins our conservation efforts and helps us to adjust our strategies.</p>
+                            <button class="text-green-500 hover:text-green-400">Read More →</button>
+                        </div>
+                    </article>
+                    <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1515378791036-1a7304b564dd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHw3fHx8fHx8fHwxNjEyMjA5MTg1&ixlib=rb-1.2.1&q=80&w=1080" alt="Eco-Friendly Practices" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Eco-Friendly Practices at Home</h3>
+                            <p class="mb-4">Simple and effective ways you can reduce your ecological footprint and contribute to conservation.</p>
+                            <button class="text-green-500 hover:text-green-400">Read More →</button>
+                        </div>
+                    </article>
+                    <article class="bg-[#1a2421] rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1515078963350-b7e8bf5bc144?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3NzV8MHwxfGFsbHw4fHx8fHx8fHwxNjEyMjA5MTg2&ixlib=rb-1.2.1&q=80&w=1080" alt="How to Get Involved" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">How to Get Involved in Conservation</h3>
+                            <p class="mb-4">Find out various ways you can actively participate in conservation efforts locally.</p>
+                            <button class="text-green-500 hover:text-green-400">Read More →</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="pt-24 pb-16 px-4">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold mb-8 text-green-500">Contact Us</h2>
+                <div class="bg-[#243028] p-8 rounded-lg shadow-lg">
+                    <form class="space-y-6" onsubmit="handleContact(event)">
+                        <div>
+                            <label class="block mb-2">Name</label>
+                            <input type="text" required class="w-full p-3 rounded-lg bg-[#1a2421] border border-green-900 focus:border-green-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Email</label>
+                            <input type="email" required class="w-full p-3 rounded-lg bg-[#1a2421] border border-green-900 focus:border-green-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Message</label>
+                            <textarea required class="w-full p-3 rounded-lg bg-[#1a2421] border border-green-900 focus:border-green-500 focus:outline-none" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="button-hover bg-green-600 text-white px-8 py-3 rounded-full">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Page -->
+        <div id="login" class="pt-24 pb-16 px-4">
+            <div class="container mx-auto max-w-md">
+                <h2 class="text-3xl font-bold mb-8 text-green-500">Login</h2>
+                <div class="bg-[#243028] p-8 rounded-lg shadow-lg">
+                    <form class="space-y-6" onsubmit="handleLogin(event)">
+                        <div>
+                            <label class="block mb-2">Email</label>
+                            <input type="email" required class="w-full p-3 rounded-lg bg-[#1a2421] border border-green-900 focus:border-green-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Password</label>
+                            <input type="password" required class="w-full p-3 rounded-lg bg-[#1a2421] border border-green-900 focus:border-green-500 focus:outline-none">
+                        </div>
+                        <button type="submit" class="button-hover bg-green-600 text-white px-8 py-3 rounded-full w-full">
+                            Login
+                        </button>
+                        <p class="mt-4 text-center">Don't have an account? <button onclick="showPage('signup')" class="text-green-500 hover:text-green-400">Sign Up</button></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Up Page -->
+        <div id="signup" class="pt-24 pb-16 px-4">
+            <div class="container mx-auto max-w-md">
+                <h2 class="text-3xl font-bold mb-8 text-green-500">Sign Up</h2>
+                <div class="bg-[#243028] p-8 rounded-lg shadow-lg">
+                    <form class="space-y-6" onsubmit="handleSignup(event)">
+                        <div>
+                            <label class="block mb-2">Name</label>
+                            <input type="text" required class="w-full p-3 rounded-lg bg-[#1a2421] border border-green-900 focus:border-green-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Email</label>
+                            <input type="email" required class="w-full p-3 rounded-lg bg-[#1a2421] border border-green-900 focus:border-green-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block mb-2">Password</label>
+                            <input type="password" required class="w-full p-3 rounded-lg bg-[#1a2421] border border-green-900 focus:border-green-500 focus:outline-none">
+                        </div>
+                        <button type="submit" class="button-hover bg-green-600 text-white px-8 py-3 rounded-full w-full">
+                            Sign Up
+                        </button>
+                        <p class="mt-4 text-center">Already have an account? <button onclick="showPage('login')" class="text-green-500 hover:text-green-400">Login</button></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Donate Page -->
+        <div id="donate" class="pt-24 pb-16 px-4 hidden">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold mb-8 text-green-500">Donate</h2>
+                <p class="mb-4 text-lg">Your donations directly support our conservation programs and help protect endangered plant species.</p>
+                <p class="mb-4 text-lg">We offer various donation methods. Whether it’s a one-time gift or a recurring contribution, every little bit helps!</p>
+                <button class="button-hover bg-green-600 text-white px-6 py-3 rounded-full">
+                    Donate Now
+                </button>
+                <button class="button-hover bg-gray-600 text-white px-6 py-3 rounded-full mt-4" onclick="showPage('involve')">
+                    Back
+                </button>
+            </div>
+        </div>
+
+        <!-- Volunteer Page -->
+        <div id="volunteer" class="pt-24 pb-16 px-4 hidden">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl font-bold mb-8 text-green-500">Volunteer</h2>
+                <p class="mb-4 text-lg">Join our team of volunteers who are passionate about making a difference in plant conservation.</p>
+                <p class="mb-4 text-lg">Together, we can help restore habitats, educate communities, and protect endangered species. Sign up today!</p>
+                <button class="button-hover bg-green-600 text-white px-6 py-3 rounded-full">
+                    Join Us
+                </button>
+                <button class="button-hover bg-gray-600 text-white px-6 py-3 rounded-full mt-4" onclick="showPage('involve')">
+                    Back
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a2421] border-t border-green-900 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 text-green-500">GreenEarth</h3>
+                    <p>Preserving nature's legacy for future generations.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><button onclick="showPage('home')" class="hover:text-green-500">Home</button></li>
+                        <li><button onclick="showPage('about')" class="hover:text-green-500">About Us</button></li>
+                        <li><button onclick="showPage('mission')" class="hover:text-green-500">Our Mission</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Get Involved</h4>
+                    <ul class="space-y-2">
+                        <li><button onclick="showPage('donate')" class="hover:text-green-500">Donate</button></li>
+                        <li><button onclick="showPage('volunteer')" class="hover:text-green-500">Volunteer</button></li>
+                        <li><button onclick="showPage('blog')" class="hover:text-green-500">Resources</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li>info@greenearth.org</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>123 Nature Street, Earth City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-green-900 text-center">
+                <p>&copy; 2024 GreenEarth. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
