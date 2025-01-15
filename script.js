@@ -1,41 +1,31 @@
- // Show default page on load
  document.addEventListener('DOMContentLoaded', () => {
     showPage('home');
 });
 
-// Mobile menu toggle
 function toggleMobileMenu() {
     const menu = document.getElementById('mobileMenu');
     menu.classList.toggle('hidden');
 }
 
-// Page navigation
 function showPage(pageId) {
-    // Hide all pages
     const pages = document.querySelectorAll('#content > div');
     pages.forEach(page => {
         page.style.display = 'none';
     });
-
-    // Show selected page
     const selectedPage = document.getElementById(pageId);
     if (selectedPage) {
         selectedPage.style.display = 'block';
-        // Scroll to top
         window.scrollTo(0, 0);
-        // Close mobile menu if open
         document.getElementById('mobileMenu').classList.add('hidden');
     }
 }
 
-// Handle Contact Form Submission
-function handleContact(event) {
-    event.preventDefault();
-    alert('Thank you for your message! We will get back to you soon.');
-    event.target.reset();
-}
+// function handleContact(event) {
+//     event.preventDefault();
+//     alert('Thank you for your message! We will get back to you soon.');
+//     event.target.reset();
+// }
 
-// Handle Login Form Submission
 function handleLogin(event) {
     event.preventDefault();
     alert('Login successful! Welcome back.');
@@ -43,10 +33,28 @@ function handleLogin(event) {
     showPage('home');
 }
 
-// Handle Signup Form Submission
 function handleSignup(event) {
     event.preventDefault();
     alert('Signup successful! Welcome to GreenEarth.');
     event.target.reset();
     showPage('login');
 }
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw6T5xlMsuHjQ-udkjOmvo48FMDFOZHwil1Dx-grARmupM_QDublv-QoZeDUjtMb6OnDg/exec' 
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+const spinnerEl = document.getElementById("spinner");
+form.addEventListener('submit', e => {
+  spinnerEl.classList.remove("d-none");
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        spinnerEl.classList.add("d-none");
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        },5000)
+        form.reset()
+    })
+    .catch(error => console.error('Error!', error.message))
+})
